@@ -1,0 +1,25 @@
+@using FindAndReplace.Models;
+@{
+  Layout = "_Layout";
+}
+
+<div class="jumbotron">
+  <h2>Your article</h2>
+</div>
+<div>
+  <p>@FindReplace.GetMainArticle()</p>
+</div>
+
+<div>
+  <form action="/findReplace" method="post">
+    <div class="form-group">
+      <label for="find">Find</label>
+      <input name="find" value="" type="text">
+    </div>
+    <div class="form-group">
+      <label for="replace">Replace With</label>
+      <input name="replace" value="" type="text">
+    </div>
+    <button type="submit">Replace</button>
+  </form>
+</div>
